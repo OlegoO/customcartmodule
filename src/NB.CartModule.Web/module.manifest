@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <id>NB.CartModule</id>
+    <version>1.0.0</version>
+    <version-tag></version-tag>
+    <platformVersion>3.66.0</platformVersion>
+    <dependencies>
+<!--        <dependency id="VirtoCommerce.Core" version="3.0.0" /> -->
+    </dependencies>
+
+    <title>NB Cart extension module</title>
+    <description>NB Cart extension module</description>
+
+    <authors>
+        <author>Sharpcode Solutions</author>
+    </authors>
+    <owners>
+        <owner>NB</owner>
+    </owners>
+
+    <assemblyFile>NB.CartModule.Web.dll</assemblyFile>
+    <moduleType>NB.CartModule.Web.Module, NB.CartModule.Web</moduleType>
+
+    <releaseNotes>First version.</releaseNotes>
+    <copyright>Copyright © 2022 NB. All rights reserved</copyright>
+    <tags>extension module</tags>
+
+</module>
+
+

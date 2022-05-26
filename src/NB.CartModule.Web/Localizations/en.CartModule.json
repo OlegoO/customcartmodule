@@ -1,0 +1,28 @@
+{
+    "CartModuleModule": {
+        "blades": {
+            "hello-world": {
+                "title": "Hello world blade"
+            }
+        }
+    },
+    "permissions": {
+        "CartModuleModule:access": "Open CartModuleModule menu",
+        "CartModuleModule:create": "Create CartModuleModule related data",
+        "CartModuleModule:read": "View CartModuleModule related data",
+        "CartModuleModule:update": "Update CartModuleModule related data",
+        "CartModuleModule:delete": "Delete CartModuleModule related data"
+    },
+    "settings": {
+        "CartModuleModule": {
+            "CartModuleModulePassword": {
+                "title": "CartModuleModule Password",
+                "description": "CartModuleModule Password setting"
+            },
+            "CartModuleModuleEnabled": {
+                "title": "CartModuleModule Enabled",
+                "description": "CartModuleModule Enabled setting"
+            }
+        }
+    }
+}
