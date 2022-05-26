@@ -20,11 +20,12 @@ namespace NB.CartModule.Data.Repositories
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<LineItemEntity>()
-            .HasDiscriminator()
-            .HasValue<NBCartLineItemEntity>(nameof(NBCartLineItemEntity));
-            modelBuilder.Entity<LineItemEntity>().Property("Discriminator").HasMaxLength(128);
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<NBCartLineItemEntity>().HasDiscriminator<string>("Discriminator").HasValue(nameof(NBCartLineItemEntity));
+            modelBuilder.Entity<NBCartLineItemEntity>().Property("Discriminator").HasMaxLength(128);
+            modelBuilder.Entity<NBCartLineItemEntity>().Property(x => x.PrescriptionId).HasMaxLength(128);
+
         }
     }
 }

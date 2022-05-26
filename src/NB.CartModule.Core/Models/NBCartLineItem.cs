@@ -9,14 +9,14 @@ namespace NB.CartModule.Core.Models
     {
         public string PrescriptionId { get; set; }
 
-        public override object Clone()
-        {
-            var result = base.Clone() as NBCartLineItem;
+        //public override object Clone()
+        //{
+        //    var result = base.Clone() as NBCartLineItem;
 
-            result.PrescriptionId = PrescriptionId;
+        //    result.PrescriptionId = PrescriptionId;
 
-            return result;
-        }
+        //    return result;
+        //}
 
     }
 }

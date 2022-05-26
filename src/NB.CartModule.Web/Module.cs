@@ -23,6 +23,10 @@ namespace NB.CartModule.Web
 
         public void Initialize(IServiceCollection serviceCollection)
         {
+            AbstractTypeFactory<LineItem>.OverrideType<LineItem, NBCartLineItem>().MapToType<NBCartLineItemEntity>();
+            AbstractTypeFactory<LineItemEntity>.OverrideType<LineItemEntity, NBCartLineItemEntity>();
+
+
             // database initialization
             var configuration = serviceCollection.BuildServiceProvider().GetRequiredService<IConfiguration>();
             var connectionString = configuration.GetConnectionString("VirtoCommerce.CartModuleModule") ?? configuration.GetConnectionString("VirtoCommerce");
@@ -47,8 +51,6 @@ namespace NB.CartModule.Web
                 }).ToArray());
 
 
-            AbstractTypeFactory<LineItem>.OverrideType<LineItem, NBCartLineItem>().MapToType<NBCartLineItemEntity>();
-            AbstractTypeFactory<LineItemEntity>.OverrideType<LineItemEntity, NBCartLineItemEntity>();
 
             // Ensure that any pending migrations are applied
             using (var serviceScope = appBuilder.ApplicationServices.CreateScope())
